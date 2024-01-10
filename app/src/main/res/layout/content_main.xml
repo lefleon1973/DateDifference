@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="56dp"
+
+    tools:showIn="@layout/activity_main">
+
+<TextView
+    android:textColor="@android:color/holo_red_light"
+    android:textSize="26dp"
+    android:visibility="gone"
+    android:gravity="center"
+    android:textAllCaps="false"
+    android:id="@+id/ap1"
+    android:text="Αποτέλεσμα 1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <LinearLayout
+
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ap1"
+        app:layout_constraintTop_toBottomOf="@+id/ap1">
+
+        <ToggleButton
+            android:textAllCaps="false"
+            android:id="@+id/dateday1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="ToggleButton"
+            android:textOff="Ημέρες"
+            android:textOn="Ημ/νία"
+            />
+
+        <EditText
+            android:id="@+id/datepick1"
+            android:textAlignment="center"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <Button
+            android:id="@+id/clear1"
+            android:tag="d1"
+            android:onClick="cleardate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="Κάθ."
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/l1"
+        app:layout_constraintStart_toStartOf="@+id/l1"
+        app:layout_constraintTop_toBottomOf="@+id/l1">
+
+        <ToggleButton
+            android:textAllCaps="false"
+            android:id="@+id/dateday2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="ToggleButton"
+            android:textOff="Ημέρες"
+            android:textOn="Ημ/νία" />
+
+        <EditText
+            android:textAlignment="center"
+            android:id="@+id/datepick2"
+
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <Button
+           android:onClick="cleardate"
+            android:tag="d2"
+            android:id="@+id/clear2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="Κάθ."
+            android:textAllCaps="false" />
+    </LinearLayout>
+    <TextView
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:id="@+id/ap2"
+        android:textSize="26dp"
+        android:text="Αποτέλεσμα 2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l2"/>
+
+    <TextView
+        android:textColor="@android:color/holo_red_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ημέρες στο 1ο τετρ/νο αρχική ημ/νια, ημέρες 2ο τετρ/νο τελική ημ/νία"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:textColor="@android:color/holo_red_dark" />
+</android.support.constraint.ConstraintLayout>
